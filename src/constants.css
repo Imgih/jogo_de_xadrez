@@ -1,7 +1,7 @@
 :root {
     --tile-size : 70px;
-    --light-tile : #F0D8B6;
-    --dark-tile : #597d35;
+    --light-tile : #6d00a1;
+    --dark-tile : #f4e8f3;
     --bg-color : #202020;
     --highlight : rgba(0,0,0,.7);
     --check : #FEEC48;
