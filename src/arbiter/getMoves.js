@@ -1,4 +1,5 @@
 import arbiter from "./arbiter"
+import { useState } from "react"
 
 export const getRookMoves = ({position,piece,rank,file}) => {
     const moves = []
@@ -139,17 +140,18 @@ export const getPawnCaptures =  ({position,prevPosition,piece,rank,file}) => {
     const dir = piece==='wp' ? 1 : -1
     const enemy = piece[0] === 'w' ? 'b' : 'w'
 
-    // Capture enemy to left
+  
+    // Captura o enimo pela esquerda
     if (position?.[rank+dir]?.[file-1] && position[rank+dir][file-1].startsWith(enemy) ){
         moves.push ([rank+dir,file-1])
     }
 
-    // Capture enemy to right
+    // Captura o inimigo pela direita
     if (position?.[rank+dir]?.[file+1] && position[rank+dir][file+1].startsWith(enemy) ){
         moves.push ([rank+dir,file+1])
     }
 
-    // EnPassant
+    // 
     // Check if enemy moved twice in last round
     const enemyPawn = dir === 1 ? 'bp' : 'wp'
     const adjacentFiles = [file-1,file+1]
@@ -319,3 +321,4 @@ export const getKingPosition = (position, player) => {
     })
     return kingPos
 }
+
