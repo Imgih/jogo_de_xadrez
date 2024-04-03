@@ -1,0 +1,98 @@
+.bg {
+    background-color: #d291bc;
+    width: auto;
+    color: white;
+    height: 900px;
+    margin: 20px auto;
+    padding-left: 350px;
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.container {
+    width: 70px;
+    height: 70px;
+
+}
+
+.box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 810px;
+    padding: 40px 40px;
+    box-shadow: 0 0 15px rgb(200, 200, 200);
+    align-items: center;
+}
+
+p {
+    text-align: justify;
+    text-indent: 70px;
+}
+
+h2 {
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    white-space: nowrap;
+    color: rgb(255, 174, 255);
+    transition: width 0.5s ease;
+    overflow: hidden;
+}
+
+h2:hover::before {
+    width: 100%;
+}
+
+.fechar {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 50px;
+    padding: 10px 20px;
+    background-color: #d291bc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+@media screen and (max-width: 64rem) {
+    .col {
+        width: calc(33.333333% - 2rem);
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .col {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 32rem) {
+    .col {
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+}
