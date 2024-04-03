@@ -9,12 +9,14 @@ const Popup = ({children}) => {
 
     const { appState : {status}, dispatch } = useAppContext();
 
-    const onClosePopup = () => {
-        dispatch(closePopup())
-    }
+    
 
     if (status === Status.ongoing)
         return null
+
+    const onClosePopup = () => {
+        dispatch(closePopup())
+    }
 
     return <div className="popup">
         {React.Children
